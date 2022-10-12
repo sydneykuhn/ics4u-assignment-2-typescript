@@ -16,19 +16,26 @@ import promptSync from 'prompt-sync'
  * @param {string} userInput is the string the user inputted.
  * @returns {number} characterCounter is the max characters in a string.
  */
-function maxRun(userInput: string): number {
-  // Set Variables
-  let runLength = 0
-  let runCounter = 0
 
-  // This function is where the max run is calculated
-  userInput.split('').forEach((value) => {
-    const characterCount = userInput.split(value).length - 1
-    if (runCounter < characterCount) {
-      runCounter = characterCount
-      runLength = runCounter
+function maxRun(userInput: string): number {
+  //Set Variables
+  let value = 1
+  let runLength = 1
+
+  for (let counter = 0; counter < userInput.length; counter++) {
+    if (userInput.charAt(counter) === userInput.charAt(counter + 1)) {
+      value += 1
+    } else {
+      if (value > runLength) {
+          runLength = value
+          value = 1
+      }
     }
-  })
+  }
+    if (value > runLength) {
+    runLength = value
+    value = 1
+  }
   return runLength
 }
 
