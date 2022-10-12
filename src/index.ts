@@ -27,12 +27,12 @@ function maxRun(userInput: string): number {
       value += 1
     } else {
       if (value > runLength) {
-          runLength = value
-          value = 1
+        runLength = value
+        value = 1
       }
     }
   }
-    if (value > runLength) {
+  if (value > runLength) {
     runLength = value
     value = 1
   }
