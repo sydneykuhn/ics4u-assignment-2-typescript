@@ -16,7 +16,7 @@ import promptSync from 'prompt-sync'
  * @param {string} userInput is the string the user inputted.
  * @returns {number} characterCounter is the max characters in a string.
  */
-function maxRun(runWord: string): number {
+function maxRun(userInput: string): number {
   // Set Variables
   let runLength = 0
   let runCounter = 0
