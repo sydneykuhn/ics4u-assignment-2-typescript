@@ -14,11 +14,11 @@ import promptSync from 'prompt-sync'
  * This function finds the run in the userInput
  *
  * @param {string} userInput is the string the user inputted.
- * @returns {number} characterCounter is the max characters in a string.
+ * @returns {number} runLength is the length of the longest run.
  */
 
 function maxRun(userInput: string): number {
-  //Set Variables
+  // Set Variables
   let value = 1
   let runLength = 1
 
